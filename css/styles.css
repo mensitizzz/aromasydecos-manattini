@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    list-style-type: none;
+}
+.todo{
+    height:100%;
+    display: grid;
+    grid-template-rows: minmax(90px, 7vh) minmax(80vh, 100%) minmax(120px, 15vh);
+    overflow: hidden;
+}
+a{
+    text-decoration:none;
+    color: rgb(0, 0, 0);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(183, 159, 206);
+    border-bottom: 2px double rgb(51, 28, 49);
+    width: 100%;
+}
+header ul, .images{
+    display: flex;
+}
+header ul li{
+    position: relative;
+    display:inline;
+    font-size: 26px;
+    margin-right: 4px;
+    background-image: linear-gradient(0deg, rgba(178, 193, 194, 0.226), rgb(178, 193, 194));
+    border-radius: 7px;
+}
+article, .indexArticle{
+    background-color:#D7C7E6;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.indexArticle{
+    display: flex;
+    justify-content: center;
+    background-image: url("./../assets/wel.png");
+}
+.articleText{
+    width: 570px;
+    font-weight:bold;
+    position: relative;
+    text-align: center;
+    top: 5%;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(0deg, rgb(48, 34, 44), rgb(121, 82, 121));
+    width: 100%;
+}
+.heightZero{
+    height: 0;
+}
+.footerIcon{
+    position: relative;
+    bottom: 30px;
+    left: 36%;
+    height: 66px;  
+}
+footer ul, footer div{
+    position: relative;
+    left:15%;
+    height:min-content;
+    font-size:14px;
+}
+.bold{
+    padding-top: 10px;
+    font-weight: bold;
+}
+.textoMain{
+    text-align: center;
+}
+.copy{
+    position: relative;
+    font-size: 12px;
+    color: #00000096;
+}
+.productosFlex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.images{
+width: 300px;
+}
+.nosotros{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+    width: 500px;
+}
+.subray{
+    border: 0;
+    border-bottom: 2px;
+    border-style:inset;
+    border-color: rgba(0, 0, 0, 0.548);
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.fondo{
+    display: flex;
+    justify-content: center;
+    background-image:linear-gradient(270deg, rgb(215 199 230),transparent),linear-gradient(90deg, rgb(215 199 230),transparent),url(./../assets/sas.jpg),url(./../assets/sas2.jpg) ;
+    background-position: 0%,100%,right, left;
+    background-size: 270px,260px,contain,contain;
+}
+.form{
+    margin-top: 3%;
+    padding-top: 1%;
+    margin-bottom: 6%;
+    border: 2px;
+    border-style: inset;
+    border-radius: 20px;
+    border-color: rgb(0, 0, 0);
+    height: fit-content;
+}
+form ul{
+    width: 90%;
+}
+.pading, .formSubray{
+    padding: 1%; 
+}
+.formSubray{
+    margin-bottom: 1.5%;
+    border: 0;
+    border-bottom: 2px;
+    border-style:inset;
+    border-color: rgba(0, 0, 0, 0.548);
+}
+.lowInput, .midInput{
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 5px;
+    border: 0;
+    padding: 5px;
+    width: 45%;
+}
+.midInput{
+    width: 93%;
+}
+.justCheck{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ayuda{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    list-style-type: none;
+    text-align: center;
+}
+.ayudaSpace{
+    width: 20%;
+    height: fit-content;
+    font-size: small;
+}
+#backgroundImg{
+   background-image:url(./../assets/wel2.png) ; 
+   background-size: contain;
+   background-position-y:bottom ;
+}
+.menuBotonImg, #menuBoton{
+    display: none;
+}
+.barra{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media screen and (max-width: 720px){
+    .todo{
+        grid-template-rows: minmax(80px, 7vh) minmax(80vh, 100%) minmax(120px, 25vh);
+    }
+    .menuBotonImg{
+        display: block;
+        width: 50px;
+        right: 15px;
+        top: 15px;
+        position: relative;
+    }
+    header{
+        align-items: flex-start;
+    }
+    header ul{
+      flex-direction: column;
+      z-index:20;
+      align-items: center;
+      position:fixed;
+      left: -100%;
+      width: 100%;
+      background-color: rgb(119, 109, 129);
+    }
+    .headerBar{
+        background-image: none;
+    }
+    #menuBoton:checked ~ul{
+        left: 0%;
+        position:relative;
+        top: 26px;
+    }
+    .menuBotonImgFooter{
+        display: block;
+        position: relative;
+        bottom: 6px;
+        left: 49px;
+        width: 11px;
+        height: 9px;
+    }
+    footer ul{
+        position: center ;
+        text-align: center;
+        left: 0;
+    }
+    footer .heightZero{
+        height: auto;
+    }
+    .footerIcon{
+        left: 0;
+        bottom: 0;
+        height: 30px;
+    }
+    .indexArticle{
+        background-size: 720px;
+    }
+    .articleText{
+        width: 300px;
+    }
+    .nosotros{
+        width: 400px;
+    }
+    .fondo{
+        background-image:linear-gradient(0deg,rgba(215 199 230, 0,1),rgba(215, 199, 230, 0.1)) url(./../assets/sas.jpg) ;
+        background-position: left;
+        background-size:cover;
+    }
+}
