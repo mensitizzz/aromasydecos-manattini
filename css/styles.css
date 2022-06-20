@@ -33,6 +33,14 @@ header ul li{
     background-image: linear-gradient(0deg, rgba(178, 193, 194, 0.226), rgb(178, 193, 194));
     border-radius: 7px;
 }
+.headerBar:hover{
+    animation: sombra 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    background-image: linear-gradient(0deg, rgba(92, 95, 95, 0.918), rgb(124, 124, 124));
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+
 article, .indexArticle{
     background-color:#D7C7E6;
     width: 100%;
@@ -40,18 +48,30 @@ article, .indexArticle{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 30px;
 }
 .indexArticle{
     display: flex;
-    justify-content: center;
-    background-image: url("./../assets/wel.png");
+    background-image: linear-gradient(270deg, rgb(215 199 230),rgba(43, 42, 42, 0.212)), linear-gradient(90deg, rgb(215 199 230),rgba(43, 42, 42, 0.212)), url("./../assets/wel.png");
+    background-position: 100%, 0%, center;
+    background-size: 50%, 50%, auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-.articleText{
+.indexImg{
+    margin-top: 20px;
+    background-image: radial-gradient(closest-side,rgba(0, 0, 0, 0.925),transparent);
+    background-position: center;
+    animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.articleText, .contText{
     width: 570px;
-    font-weight:bold;
+    font-weight:bolder;
+    font-size: large;
     position: relative;
     text-align: center;
-    top: 5%;
+    margin-top: 3%;
 }
 footer{
     display: flex;
@@ -68,6 +88,9 @@ footer{
     left: 36%;
     height: 66px;  
 }
+.footerIcon:hover{
+transform: scale(1.1);
+}
 footer ul, footer div{
     position: relative;
     left:15%;
@@ -78,6 +101,9 @@ footer ul, footer div{
     padding-top: 10px;
     font-weight: bold;
 }
+.inline{
+    display: inline;
+}
 .textoMain{
     text-align: center;
 }
@@ -86,15 +112,18 @@ footer ul, footer div{
     font-size: 12px;
     color: #00000096;
 }
-.productosFlex{
+.productosFlex, .contFlex{
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+.productosFlex{
+    align-items: center;
 }
 .images{
 width: 300px;
 }
-.nosotros{
+.nosotros, .form{
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -113,9 +142,9 @@ width: 300px;
 .fondo{
     display: flex;
     justify-content: center;
-    background-image:linear-gradient(270deg, rgb(215 199 230),transparent),linear-gradient(90deg, rgb(215 199 230),transparent),url(./../assets/sas.jpg),url(./../assets/sas2.jpg) ;
+    background-image:linear-gradient(270deg, rgb(215 199 230),transparent),linear-gradient(90deg,rgb(215 199 230),transparent),url(./../assets/sas.jpg),url(./../assets/sas2.jpg) ;
     background-position: 0%,100%,right, left;
-    background-size: 270px,260px,contain,contain;
+    background-size: 31%,31%,30%,30%;
 }
 .form{
     margin-top: 3%;
@@ -126,9 +155,14 @@ width: 300px;
     border-radius: 20px;
     border-color: rgb(0, 0, 0);
     height: fit-content;
+    width: 54%;
 }
 form ul{
     width: 90%;
+}
+.contText{
+    width: 45%;
+    margin-bottom: 3%;
 }
 .pading, .formSubray{
     padding: 1%; 
@@ -150,27 +184,26 @@ form ul{
 .midInput{
     width: 93%;
 }
+.spaceArrown{
+    display: flex;
+    justify-content: space-around;
+}
 .justCheck{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: initial;
 }
 .ayuda{
+    text-align: center;
+    font-size: medium;
     display: flex;
     flex-flow: column;
     align-items: center;
-    list-style-type: none;
-    text-align: center;
 }
-.ayudaSpace{
+.ayudaSpace{ 
     width: 20%;
-    height: fit-content;
-    font-size: small;
-}
-#backgroundImg{
-   background-image:url(./../assets/wel2.png) ; 
-   background-size: contain;
-   background-position-y:bottom ;
+    height: fit-content;   
 }
 .menuBotonImg, #menuBoton{
     display: none;
@@ -180,10 +213,63 @@ form ul{
     flex-direction: column;
     align-items: flex-end;
 }
+.fondoAyudaCell{
+    background-image:url(./../assets/ayudaCs.png) ; 
+    background-size: cover;
+    background-position-y:bottom ;
+}
+article p{
+    animation: articTextSpawn 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    margin-bottom: 0;
+}
+.images:active{
+width: 400px;
 
+}
+@keyframes scale-in-center {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+@keyframes articTextSpawn {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+@keyframes menuDes {
+    0% {
+        transform: translateX(300px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+@keyframes sombra {
+  0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
 @media screen and (max-width: 720px){
     .todo{
-        grid-template-rows: minmax(80px, 7vh) minmax(80vh, 100%) minmax(120px, 25vh);
+        grid-template-rows: minmax(80px, 7vh) minmax(68vh, 100%) minmax(120px, 25vh);
     }
     .menuBotonImg{
         display: block;
@@ -196,21 +282,27 @@ form ul{
         align-items: flex-start;
     }
     header ul{
-      flex-direction: column;
-      z-index:20;
-      align-items: center;
-      position:fixed;
-      left: -100%;
-      width: 100%;
-      background-color: rgb(119, 109, 129);
+        flex-direction: column;
+        z-index:20;
+        padding: 4px;
+        align-items: stretch;
+        position:relative;
+        top: 26px;
+        left: 300px;
+        width: 100%;
+        background-color: rgb(119, 109, 129);
+        border-bottom-left-radius: 5px;
+        overflow: hidden;
     }
     .headerBar{
         background-image: none;
     }
     #menuBoton:checked ~ul{
         left: 0%;
-        position:relative;
-        top: 26px;
+        animation: menuDes 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    #logo:hover{
+        bottom: 4px;
     }
     .menuBotonImgFooter{
         display: block;
@@ -229,12 +321,10 @@ form ul{
         height: auto;
     }
     .footerIcon{
+        padding-top: 4px;
         left: 0;
         bottom: 0;
         height: 30px;
-    }
-    .indexArticle{
-        background-size: 720px;
     }
     .articleText{
         width: 300px;
@@ -246,5 +336,29 @@ form ul{
         background-image:linear-gradient(0deg,rgba(215 199 230, 0,1),rgba(215, 199, 230, 0.1)) url(./../assets/sas.jpg) ;
         background-position: left;
         background-size:cover;
+    }
+    .contFlex{
+        flex-flow: column;
+        align-items: center;
+        font-size: 76%;
+    }
+    .form{
+        width: 96%;
+    }
+    .contText{
+        width: 300px;
+    }
+    .ayudaSpace{
+        width: 90%;
+    }
+    .fondoAyudaCell{
+        background-size: cover;
+        background-image: linear-gradient(0deg, #ffffffc2, #ffffffc2), url(./../assets/ayuda.jpg);
+    }
+    .images{
+        width: 250px;
+    }
+    .indexImg{
+        width: 95%;
     }
 }
