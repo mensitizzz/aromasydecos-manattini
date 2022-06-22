@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./../assets/aroma.png">
     <link rel="stylesheet" type="text/css" href="./../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Macondo&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
     <div class="todo">
@@ -16,12 +17,12 @@
             <div class="barra">
                 <input type="checkbox" id="menuBoton">
                 <label for="menuBoton" class="menuBotonImg" ><img  src="./../assets/6499731.png" width="50px" alt=""></label>    
-                <ul>
-                    <li class="headerBar"><a href="./../index.html">  <p>INICIO</p></a></li>
-                    <li class="headerBar"><a href="./productos.html"> <p>PRODUCTOS </p></a></li>
-                    <li class="headerBar"><a href="./nosotros.html">  <p>NOSOTROS</p></a></li>
-                    <li class="headerBar"><a href="./contacto.html">  <p>CONTACTO</p></a></li>
-                    <li class="headerBar"><a href="./ayuda.html">     <p>AYUDA</p></a></li>    
+                <ul class="mb-0">
+                    <li class="headerBar"><a class="text-decoration-none" href="./../index.html">  <p class="mb-0 text-dark">INICIO</p></a></li>
+                    <li class="headerBar"><a class="text-decoration-none" href="./productos.html"> <p class="mb-0 text-dark">PRODUCTOS </p></a></li>
+                    <li class="headerBar"><a class="text-decoration-none" href="./nosotros.html">  <p class="mb-0 text-dark">NOSOTROS</p></a></li>
+                    <li class="headerBar"><a class="text-decoration-none" href="./contacto.html">  <p class="mb-0 text-dark">CONTACTO</p></a></li>
+                    <li class="headerBar"><a class="text-decoration-none" href="./ayuda.html">     <p class="mb-0 text-dark">AYUDA</p></a></li>    
                 </ul>
             </div>
         </header>
@@ -34,39 +35,39 @@
             <form class="form">
                 <ul>
                     <li class="spaceArrown">
-                        <label for="nombre">Nombre</label>
-                        <label for="apellido">Apellido</label>
+                        <label for="nombre ">Nombre</label>
+                        <label for="apellido ">Apellido</label>
                     </li>
                     <li class="formSubray">
-                        <input class="lowInput" type="text" id="nombre">
-                        <input class="lowInput" type="text" id="apellido">
+                        <input class="lowInput" type="text" id="nombre" value="" required>
+                        <input class="lowInput" type="text" id="apellido" value="" required>
                     </li>  
                    <li>
                        <label for="correo">correo electrónico</label>
                     </li>
                     <li class="formSubray">
-                        <input class="midInput" type="text" id="correo" placeholder="info@textoejem.com.ar">
+                        <input class="midInput" type="text" id="correo" placeholder="info@textoejem.com.ar" required>
                     </li>
                     <li>
                         <label for="numero">Número de telefono</label>
                     </li>
                     <li class="formSubray">
-                        <input class="midInput" type="text"  id="numero" placeholder="+11 111 111111">
+                        <input class="midInput" type="text"  id="numero" placeholder="+11 111 111111" required>
                     </li>
                     <li class="formSubray justCheck">
                         <label>¿ya nos conocias?</label>
-                        <input class="justCheckIcon" type="checkbox" name="opcion"   value="Si">
+                        <input class="form-check-input" type="checkbox" name="opcion"   value="Si">
                     </li>
                     <li class="formSubray justCheck">
                         <label>¿quieres saber sobre proximas novedades?</label>  
-                        <input class="justCheckIcon" type="checkbox" name="opcion"   value="Si">
+                        <input class="form-check-input" type="checkbox" name="opcion"   value="Si">
                     </li>
                     <li>
                         <label for="extra">comentarios o consultas</label>
                     
                     </li>
                     <li >
-                        <textarea class="midInput" name="extra" id="extra" rows="10" cols="40"></textarea>
+                        <textarea class="midInput" name="extra" id="extra" rows="10" cols="40" required></textarea>
                     </li>
                     <li class="productosFlex pading">
                         <input class="lowInput" type="submit">
@@ -77,14 +78,17 @@
         </article>
         <footer>
             <ul> 
-                <li><p class="bold footerMenu" >contáctanos</p></li>
-                <li><p class="footerMenu">Email: aromaydecos.sf@gmail.com.ar</p></li>
-                <li><p class="footerMenu">whatsapp: (420) 6876-1545</p></li>
-                <li><p class="footerMenu">Tel: (420) 4564-6781</p></li>
+                <li><p class="bold footerMenu mb-0" >contáctanos</p></li>
+                <li><p class="footerMenu mb-0">Email: aromaydecos.sf@gmail.com.ar</p></li>
+                <li><p class="footerMenu mb-0">whatsapp: (420) 6876-1545</p></li>
+                <li><p class="footerMenu mb-0">Tel: (420) 4564-6781</p></li>
                 <li class="heightZero"><a class="footerIcon" href="https://www.instagram.com/aromasydeco.sf/?hl=es" target="_blank"><img src="./../assets/instagram_icon_logo.png" alt="link hacia nuestro instagram" class="footerIcon" title="insta"/></a></li>
             </ul>
-            <p class="copy">Alejandro Manattini © 2022</p>
+            <p class="copy mb-0">Alejandro Manattini © 2022</p>
         </footer>
-    </div>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
