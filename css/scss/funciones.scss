@@ -1,0 +1,50 @@
+$escalauno:scale(1.1);
+@keyframes scale-in-center {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+@keyframes articTextSpawn {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+@keyframes menuDes {
+    0% {
+        transform: translateX(300px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+@keyframes sombra {
+  0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+@keyframes backrgb {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

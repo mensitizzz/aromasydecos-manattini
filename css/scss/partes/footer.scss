@@ -1,0 +1,44 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(0deg, rgb(48, 34, 44), rgb(121, 82, 121));
+    width: 100%;
+    ul{
+        position: relative;
+        left:15%;
+        height:min-content;
+        font-size:14px;
+        @media screen and (max-width: 720px){
+            text-align: center;
+            left: 0;   
+        }
+        a{
+            @media screen and (min-width: 721px){
+            height: 0px;
+            position: relative;
+            bottom: 53px;
+            left: 72%;
+            img{
+                width: 66px;  
+                }
+            }
+        }
+        a:hover{
+            transform: $escalauno;
+        }
+       @media screen and (max-width: 280px){
+        font-size:10px; 
+    }
+    }
+    h6{
+        position: relative;
+        font-size: 12px;
+        color: #00000096;
+        margin-top: 15px;
+        @media screen and (max-width: 721px){
+            font-size: 8px;
+            margin-top: 0px;
+        }
+    } 
+    
+}
