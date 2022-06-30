@@ -69,6 +69,7 @@ article, .indexArticle{
     padding-top: 20px;
 
 }
+
 .subray{
     border: 0;
     border-bottom: 2px;
@@ -76,13 +77,6 @@ article, .indexArticle{
     border-color: rgba(0, 0, 0, 0.548);
     padding-left: 5rem;
     padding-right: 5rem;
-}
-.fondo{
-    display: flex;
-    justify-content: center;
-    background-image:linear-gradient(270deg, rgb(215 199 230),transparent),linear-gradient(90deg,rgb(215 199 230),transparent),url(./../assets/sas.jpg),url(./../assets/sas2.jpg) ;
-    background-position: 0%,100%,right, left;
-    background-size: 31%,31%,30%,30%;
 }
 .contText{
     width: 45%;
@@ -98,13 +92,6 @@ article, .indexArticle{
     border-style:inset;
     border-color: rgba(0, 0, 0, 0.548);
 }
-/* .lowInput, .midInput{
-    background-color: rgba(0, 0, 0, 0.144);
-    border-radius: 5px;
-    border: 0;
-    padding: 5px;
-    width: 45%;
-} */
 .midInput{
     width: 93%;
 }
@@ -141,6 +128,7 @@ article, .indexArticle{
     background-image:url(./../assets/ayudaCs.png) ; 
     background-size: cover;
     background-position-y:bottom ;
+    padding-bottom: 2rem;
 }
 article p{
     animation: articTextSpawn 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -160,7 +148,7 @@ width: 400px;
     .menuBotonImg{
         display: block;
         width: 50px;
-        right: 15px;
+        right: 1rem;
         top: 15px;
         position: relative;
     }
@@ -195,6 +183,11 @@ width: 400px;
     .nosotros h3{
         font-size: 16px;
     }
+    .fondo{
+        background-image:linear-gradient(0deg,rgba(215 199 230, 0,1),rgba(215, 199, 230, 0.1)) url(./../assets/sas.jpg) ;
+        background-position: left;
+        background-size:cover;
+    }
     .contFlex{
         flex-flow: column;
         align-items: center;
@@ -209,14 +202,15 @@ width: 400px;
     .ayudaSpace{
         width: 90%;
     }
+    .fondoAyudaCell{
+        background-size: cover;
+        background-image: linear-gradient(0deg, #ffffffc2, #ffffffc2), url(./../assets/ayuda.jpg);
+    }
     .indexImg{
         width: 95%;
     }
 }
 @media screen and (max-width: 440px){
-    .nosotros{
-        width: 95%;
-    }
     .subray,p,h3,h2{
         font-size: 13px;
     }

@@ -60,9 +60,6 @@ header {
 header a:hover {
   transform: scale(1.1);
 }
-header div {
-  padding-right: 1rem;
-}
 header div ul {
   display: flex;
 }
