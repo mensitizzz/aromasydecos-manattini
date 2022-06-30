@@ -1,0 +1,48 @@
+.fondo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image:linear-gradient(270deg, rgb(215 199 230),transparent),linear-gradient(90deg,rgb(215 199 230),transparent),url(./../assets/sas.jpg),url(./../assets/sas2.jpg) ;
+    background-position: 0%,100%,right, left;
+    background-size: 31%,31%,30%,30%;
+    overflow: hidden;
+    @media screen and (max-width: 720px){
+        background-image:linear-gradient(0deg,rgba(215, 199, 230, 0.102),rgba(215, 199, 230, 0.102)) url(./../assets/sas.jpg) ;
+        background-position: left;
+        background-size:cover;
+    }
+    ul{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        list-style-type: none;
+        text-align: center;
+        width: 500px;
+        padding-bottom: 0.5rem;
+        @media screen and (max-width: 720px){
+            width: 95%;
+        }
+    }
+    div{
+        display: flex;
+        align-items: stretch;
+        align-content: space-between;
+        width: 95%;
+        @media screen and (max-width: 720px){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 70%;
+        }
+        @media screen and (max-width: 440px){
+            width: 90%; 
+        }
+        div{
+            padding:1rem;
+            img{
+             width: 100%;
+            }
+        }
+    }
+}
