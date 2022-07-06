@@ -2,7 +2,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: linear-gradient(90deg ,#c3a6df ,#8576ce);
+    background-image: linear-gradient(90deg ,map-get($colores, lilaClaro), map-get($colores, lilaOscuro));
     background-size: 600% 100%;
     animation: backrgb 8s infinite alternate both;
     border-bottom: 2px double rgb(51, 28, 49);
@@ -45,4 +45,7 @@ header {
             }
         }
     }
+    @media screen and (max-width: 720px){
+        align-items: flex-start;   
+    } 
 }

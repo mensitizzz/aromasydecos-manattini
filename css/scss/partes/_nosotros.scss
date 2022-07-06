@@ -1,7 +1,5 @@
 .fondo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColCenter();
     justify-content: flex-start;
     background-image:linear-gradient(270deg, rgb(215 199 230),transparent),linear-gradient(90deg,rgb(215 199 230),transparent),url(./../assets/sas.jpg),url(./../assets/sas2.jpg) ;
     background-position: 0%,100%,right, left;
@@ -13,9 +11,7 @@
         background-size:cover;
     }
     ul{
-        display: flex;
-        flex-flow: column;
-        align-items: center;
+        @include flexColCenter();
         list-style-type: none;
         text-align: center;
         width: 500px;

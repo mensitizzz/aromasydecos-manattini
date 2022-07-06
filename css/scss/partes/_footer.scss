@@ -1,7 +1,7 @@
 footer{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(0deg, rgb(48, 34, 44), rgb(121, 82, 121));
+    background-image: linear-gradient(0deg, map-get($colores, moradoOscuro), map-get($colores, moradoClaro));
     width: 100%;
     ul{
         position: relative;

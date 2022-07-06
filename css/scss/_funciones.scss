@@ -1,4 +1,21 @@
+/* funsiones */
 $escalauno:scale(1.1);
+
+/* maps */
+ $colores:(
+  lilaClaro:#c3a6df,
+  lilaOscuro:#8576ce,
+  moradoClaro:#795279,
+  moradoOscuro:#30222c
+ );
+/* mixin */
+@mixin flexColCenter {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+
 @keyframes scale-in-center {
     0% {
       transform: scale(0);
