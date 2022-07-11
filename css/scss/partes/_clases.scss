@@ -4,7 +4,7 @@
     font-family: 'Roboto Slab', serif;
     list-style-type: none;
     text-decoration:none;
-    color: rgb(0, 0, 0);
+    color: $negro;
 }
 .todo{
     height:100%;
@@ -15,34 +15,8 @@
 .heightZero{
     height: 0px;
 }
-article, .indexArticle{
-    background-color:#D7C7E6;
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.indexArticle{
-    @include flexColCenter();
-    background-image: linear-gradient(270deg, rgb(215 199 230),rgba(43, 42, 42, 0.212)), linear-gradient(90deg, rgb(215 199 230),rgba(43, 42, 42, 0.212)), url("./../assets/wel.png");
-    background-position: 100%, 0%, center;
-    background-size: 50%, 50%, auto;
-    justify-content: flex-start;
-}
-.indexImg{
-    margin-top: 20px;
-    background-image: radial-gradient(closest-side,rgba(0, 0, 0, 0.925),transparent);
-    background-position: center;
-    animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-.articleText, .contText{
-    width: 570px;
-    font-weight:bolder;
-    font-size: large;
-    position: relative;
-    text-align: center;
-    margin-top: 3%;
+article{
+    @include article();
 }
 .bold{
     padding-top: 10px;
@@ -54,40 +28,31 @@ article, .indexArticle{
 .textoMain{
     text-align: center;
 }
-.productosFlex, .contFlex{
-    @extend .spaceArrown;
-    flex-wrap: wrap;
-}
 .productosFlex{
-    align-items: flex-start;
-    background-image:linear-gradient(270deg, rgb(47, 38, 56), transparent), linear-gradient(90deg, rgb(47, 38, 56) ,transparent);
+    @include flexColCenter();
+    background-image:linear-gradient(270deg, $moradoOscuro, transparent), linear-gradient(90deg, $moradoOscuro ,transparent);
     background-position: 100%,0%;
     background-size: 50%,50%;
     padding-top: 20px;
-
 }
-
+.contFlex{
+    @extend .spaceArrown;
+    flex-wrap: wrap;
+}
 .subray{
     border: 0;
     border-bottom: 2px;
     border-style:inset;
-    border-color: rgba(0, 0, 0, 0.548);
+    border-color: $semiNegro;
     padding-left: 5rem;
     padding-right: 5rem;
 }
 .contText{
+    @include largeFont();
     width: 45%;
-    margin-bottom: 3%;
 }
-.pading, .formSubray{
+.pading{
     padding: 1%; 
-}
-.formSubray{
-    margin-bottom: 1.5%;
-    border: 0;
-    border-bottom: 2px;
-    border-style:inset;
-    border-color: rgba(0, 0, 0, 0.548);
 }
 .midInput{
     width: 93%;
@@ -120,7 +85,7 @@ article, .indexArticle{
     align-items: flex-end;
 }
 .fondoAyudaCell{
-    background-image:url(./../assets/ayudaCs.png) ; 
+    background-image:url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/ayudaCs.png"); 
     background-size: cover;
     background-position-y:bottom ;
     padding-bottom: 2rem;
@@ -132,7 +97,7 @@ article p{
     animation: articTextSpawn 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     margin-bottom: 0;
 }
-@media screen and (max-width: 720px){
+@media screen and (max-width: $high){
     .todo{
         grid-template-rows: minmax(80px, 7vh) minmax(68vh, 100%) minmax(120px, 25vh);
     }
@@ -142,9 +107,6 @@ article p{
         right: 1rem;
         top: 15px;
         position: relative;
-    }
-    .headerBar{
-        background-image: none;
     }
     #menuBoton:checked ~ul{
         left: 0%;
@@ -159,44 +121,38 @@ article p{
         bottom: 0;
         height: 30px;
     }
-    .articleText{
+    .contText{
         width: 300px;
     }
     .nosotros{
         width: 400px;
-    }
-    .fondo{
-        background-image:linear-gradient(0deg, rgba(215, 199, 230, 0.1),rgba(215, 199, 230, 0.1)) url(./../assets/sas.jpg) ;
-        background-position: left;
-        background-size:cover;
     }
     .contFlex{
         flex-flow: column;
         align-items: center;
         font-size: 76%;
     }
-    .contText{
-        width: 300px;
-    }
-    .ayudaSpace, .indexImg{
+    .ayudaSpace{
         width: 95%;
     }
     .fondoAyudaCell{
         background-size: cover;
-        background-image: linear-gradient(0deg, #ffffffc2, #ffffffc2), url(./../assets/ayuda.jpg);
+        background-image: linear-gradient(0deg, $semiGris, $semiGris), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/ayuda.jpg");
     }
 }
-@media screen and (max-width: 440px){
+@media screen and (max-width: $mid){
     .subray,p,h3,h2{
         font-size: 13px;
     }
-}
-@media screen and (max-width: 320px){
-    .articleText{
-        width: 220px;
-        font-size:medium;
+    h1{
+        font-size: 20px;
     }
+}
+@media screen and (max-width: $low){
     .subray, h3,p,h2{
         font-size: 10px;
+    }
+    h1{
+        font-size: 16px;
     }
 }

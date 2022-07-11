@@ -1,19 +1,19 @@
 footer{
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(0deg, map-get($colores, moradoOscuro), map-get($colores, moradoClaro));
+    background-image: linear-gradient(0deg, $moradoOscuro, $moradoClaro);
     width: 100%;
     ul{
         position: relative;
         left:15%;
         height:min-content;
         font-size:14px;
-        @media screen and (max-width: 720px){
+        @media screen and (max-width: $high){
             text-align: center;
             left: 0;   
         }
         a{
-            @media screen and (min-width: 721px){
+            @media screen and (min-width: $high+1){
             height: 0px;
             position: relative;
             bottom: 53px;
@@ -26,16 +26,16 @@ footer{
         a:hover{
             transform: $escalauno;
         }
-       @media screen and (max-width: 280px){
+       @media screen and (max-width: $low){
         font-size:10px; 
     }
     }
     h6{
         position: relative;
         font-size: 12px;
-        color: #00000096;
+        color: $semiNegro;
         margin-top: 15px;
-        @media screen and (max-width: 721px){
+        @media screen and (max-width: $high+1){
             font-size: 8px;
             margin-top: 0px;
         }

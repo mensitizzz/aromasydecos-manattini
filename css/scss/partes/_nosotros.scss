@@ -1,12 +1,12 @@
 .fondo{
     @include flexColCenter();
     justify-content: flex-start;
-    background-image:linear-gradient(270deg, rgb(215 199 230),transparent),linear-gradient(90deg,rgb(215 199 230),transparent),url(./../assets/sas.jpg),url(./../assets/sas2.jpg) ;
+    background-image:linear-gradient(270deg, $lilaClaro ,transparent),linear-gradient(90deg,$lilaClaro,transparent),url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas.jpg),url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas2.jpg) ;
     background-position: 0%,100%,right, left;
     background-size: 31%,31%,30%,30%;
     overflow: hidden;
-    @media screen and (max-width: 720px){
-        background-image:linear-gradient(0deg,rgba(215, 199, 230, 0.102),rgba(215, 199, 230, 0.102)) url(./../assets/sas.jpg) ;
+    @media screen and (max-width: $high){
+        background-image:linear-gradient(0deg, $semiGris, $semiGris) url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas.jpg) ;
         background-position: left;
         background-size:cover;
     }
@@ -16,7 +16,7 @@
         text-align: center;
         width: 500px;
         padding-bottom: 0.5rem;
-        @media screen and (max-width: 720px){
+        @media screen and (max-width: $high){
             width: 95%;
         }
     }
@@ -25,13 +25,13 @@
         align-items: stretch;
         align-content: space-between;
         width: 95%;
-        @media screen and (max-width: 720px){
+        @media screen and (max-width: $high){
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             width: 70%;
         }
-        @media screen and (max-width: 440px){
+        @media screen and (max-width: $mid){
             width: 90%; 
         }
         div{

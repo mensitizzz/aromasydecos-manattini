@@ -1,0 +1,31 @@
+.indexArticle{
+    @include article();
+    @include flexColCenter();
+    background-image: linear-gradient(270deg, $semiGris,$semiNegro,$semiGris), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/wel.png");
+    background-size: 100%, auto;
+    div{
+        width: 570px;
+        @include largeFont();
+        margin-top: 3%;
+    }
+    img{
+        margin-top: 20px;
+        background-image: radial-gradient(closest-side,$semiNegro,transparent);
+        background-position: center;
+        animation: scale-in-center 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @media screen and (max-width: $high){
+        div{
+            width: 300px;
+        }
+        img{
+            width: 95%;
+        }
+    }
+    @media screen and (max-width: $low){
+        div{
+            width: 220px;
+            font-size:medium;
+        }
+    }
+}

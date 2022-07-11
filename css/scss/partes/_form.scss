@@ -7,10 +7,10 @@ form{
     border: 2px;
     border-style: inset;
     border-radius: 20px;
-    border-color: rgb(0, 0, 0);
+    border-color: $negro;
     height: fit-content;
     width: 54%;
-    @media screen and (max-width: 720px){
+    @media screen and (max-width: $high){
         width: 95%;  
     }
     ul{
@@ -22,13 +22,26 @@ form{
             justify-content:center;
             
             input, textarea{
-                background-color: rgba(0, 0, 0, 0.144);
+                background-color: $semiNegro;
                 border-radius: 5px;
                 border: 0;
                 padding: 5px;
                 width: 45%;
                 margin-inline: 0.5rem;
             }
+            input[type="checkbox"]{
+                display: flex;
+                width: 20px;
+                height: 20px;
+                margin-right: 11px;
+            }
         }
     }
+}
+.formSubray{
+    @extend .pading;
+    border: 0;
+    border-bottom: 2px;
+    border-style:inset;
+    border-color: $semiNegro;
 }

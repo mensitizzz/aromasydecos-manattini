@@ -1,5 +1,4 @@
 /* funsiones */
-/* maps */
 /* mixin */
 @keyframes scale-in-center {
   0% {
@@ -26,7 +25,7 @@
 }
 @keyframes menuDes {
   0% {
-    transform: translateX(300px);
+    transform: translateX(320px);
     opacity: 0;
   }
   100% {
@@ -36,10 +35,10 @@
 }
 @keyframes sombra {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 transparent;
   }
   100% {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3647058824);
   }
 }
 @keyframes backrgb {
@@ -56,7 +55,7 @@
   font-family: "Roboto Slab", serif;
   list-style-type: none;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .todo {
@@ -70,39 +69,12 @@
   height: 0px;
 }
 
-article, .indexArticle {
-  background-color: #D7C7E6;
+article {
+  background-color: #c3a6df;
   width: 100%;
   height: 100%;
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.indexArticle {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  background-image: linear-gradient(270deg, rgb(215, 199, 230), rgba(43, 42, 42, 0.212)), linear-gradient(90deg, rgb(215, 199, 230), rgba(43, 42, 42, 0.212)), url("./../assets/wel.png");
-  background-position: 100%, 0%, center;
-  background-size: 50%, 50%, auto;
-  justify-content: flex-start;
-}
-
-.indexImg {
-  margin-top: 20px;
-  background-image: radial-gradient(closest-side, rgba(0, 0, 0, 0.925), transparent);
-  background-position: center;
-  animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-.articleText, .contText {
-  width: 570px;
-  font-weight: bolder;
-  font-size: large;
-  position: relative;
-  text-align: center;
-  margin-top: 3%;
 }
 
 .bold {
@@ -118,49 +90,45 @@ article, .indexArticle {
   text-align: center;
 }
 
-.productosFlex, .contFlex {
-  flex-wrap: wrap;
-}
-
 .productosFlex {
-  align-items: flex-start;
-  background-image: linear-gradient(270deg, rgb(47, 38, 56), transparent), linear-gradient(90deg, rgb(47, 38, 56), transparent);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-image: linear-gradient(270deg, #30222c, transparent), linear-gradient(90deg, #30222c, transparent);
   background-position: 100%, 0%;
   background-size: 50%, 50%;
   padding-top: 20px;
+}
+
+.contFlex {
+  flex-wrap: wrap;
 }
 
 .subray {
   border: 0;
   border-bottom: 2px;
   border-style: inset;
-  border-color: rgba(0, 0, 0, 0.548);
+  border-color: rgba(0, 0, 0, 0.3647058824);
   padding-left: 5rem;
   padding-right: 5rem;
 }
 
 .contText {
+  font-weight: bolder;
+  font-size: large;
+  text-align: center;
   width: 45%;
-  margin-bottom: 3%;
 }
 
 .pading, .formSubray {
   padding: 1%;
 }
 
-.formSubray {
-  margin-bottom: 1.5%;
-  border: 0;
-  border-bottom: 2px;
-  border-style: inset;
-  border-color: rgba(0, 0, 0, 0.548);
-}
-
 .midInput {
   width: 93%;
 }
 
-.spaceArrown, .productosFlex, .contFlex {
+.spaceArrown, .contFlex {
   display: flex;
   justify-content: space-around;
 }
@@ -196,7 +164,7 @@ article, .indexArticle {
 }
 
 .fondoAyudaCell {
-  background-image: url(./../assets/ayudaCs.png);
+  background-image: url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/ayudaCs.png");
   background-size: cover;
   background-position-y: bottom;
   padding-bottom: 2rem;
@@ -222,9 +190,6 @@ article p {
     top: 15px;
     position: relative;
   }
-  .headerBar {
-    background-image: none;
-  }
   #menuBoton:checked ~ ul {
     left: 0%;
     animation: menuDes 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -238,45 +203,39 @@ article p {
     bottom: 0;
     height: 30px;
   }
-  .articleText {
+  .contText {
     width: 300px;
   }
   .nosotros {
     width: 400px;
-  }
-  .fondo {
-    background-image: linear-gradient(0deg, rgba(215, 199, 230, 0.1), rgba(215, 199, 230, 0.1)) url(./../assets/sas.jpg);
-    background-position: left;
-    background-size: cover;
   }
   .contFlex {
     flex-flow: column;
     align-items: center;
     font-size: 76%;
   }
-  .contText {
-    width: 300px;
-  }
-  .ayudaSpace, .indexImg {
+  .ayudaSpace {
     width: 95%;
   }
   .fondoAyudaCell {
     background-size: cover;
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.7607843137), rgba(255, 255, 255, 0.7607843137)), url(./../assets/ayuda.jpg);
+    background-image: linear-gradient(0deg, rgba(214, 214, 214, 0.2039215686), rgba(214, 214, 214, 0.2039215686)), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/ayuda.jpg");
   }
 }
 @media screen and (max-width: 440px) {
   .subray, p, h3, h2 {
     font-size: 13px;
   }
+  h1 {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 320px) {
-  .articleText {
-    width: 220px;
-    font-size: medium;
-  }
   .subray, h3, p, h2 {
     font-size: 10px;
+  }
+  h1 {
+    font-size: 16px;
   }
 }
 header {
@@ -286,7 +245,7 @@ header {
   background-image: linear-gradient(90deg, #c3a6df, #8576ce);
   background-size: 600% 100%;
   animation: backrgb 8s infinite alternate both;
-  border-bottom: 2px double rgb(51, 28, 49);
+  border-bottom: 2px double #30222c;
   width: 100%;
 }
 header a:hover {
@@ -296,11 +255,12 @@ header div ul {
   display: flex;
 }
 header div ul li {
+  background-image: none;
   position: relative;
   display: inline;
   font-size: 26px;
   margin-right: 4px;
-  background-image: linear-gradient(0deg, rgba(178, 193, 194, 0.226), rgb(178, 193, 194));
+  background-image: linear-gradient(0deg, transparent, #acacac);
   border-radius: 7px;
 }
 header div ul li a p {
@@ -308,9 +268,9 @@ header div ul li a p {
 }
 header div ul li:hover {
   animation: sombra 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  background-image: linear-gradient(0deg, rgba(92, 95, 95, 0.918), rgb(124, 124, 124));
+  background-image: linear-gradient(0deg, #5a5a5a, #5a5a5a);
 }
-@media screen and (min-width: 0px) and (max-width: 720px) {
+@media screen and (max-width: 720px) {
   header div ul {
     flex-direction: column;
     z-index: 20;
@@ -320,7 +280,7 @@ header div ul li:hover {
     top: 26px;
     left: 300px;
     width: 100%;
-    background-color: rgb(119, 109, 129);
+    background-color: #acacac;
     border-bottom-left-radius: 5px;
     overflow: hidden;
   }
@@ -363,7 +323,7 @@ footer ul {
 footer ul a:hover {
   transform: scale(1.1);
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 320px) {
   footer ul {
     font-size: 10px;
   }
@@ -371,7 +331,7 @@ footer ul a:hover {
 footer h6 {
   position: relative;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.5882352941);
+  color: rgba(0, 0, 0, 0.3647058824);
   margin-top: 15px;
 }
 @media screen and (max-width: 721px) {
@@ -451,7 +411,7 @@ input[type=radio] {
   z-index: 2;
 }
 #item-1:checked ~ .cards #img-1 img, #item-2:checked ~ .cards #img-2 img, #item-3:checked ~ .cards #img-3 img, #item-4:checked ~ .cards #img-4 img {
-  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  box-shadow: 0px 0px 5px 0px rgba(214, 214, 214, 0.2039215686);
 }
 
 form {
@@ -463,7 +423,7 @@ form {
   border: 2px;
   border-style: inset;
   border-radius: 20px;
-  border-color: rgb(0, 0, 0);
+  border-color: #000000;
   height: fit-content;
   width: 54%;
 }
@@ -482,12 +442,25 @@ form ul li {
   justify-content: center;
 }
 form ul li input, form ul li textarea {
-  background-color: rgba(0, 0, 0, 0.144);
+  background-color: rgba(0, 0, 0, 0.3647058824);
   border-radius: 5px;
   border: 0;
   padding: 5px;
   width: 45%;
   margin-inline: 0.5rem;
+}
+form ul li input[type=checkbox] {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 11px;
+}
+
+.formSubray {
+  border: 0;
+  border-bottom: 2px;
+  border-style: inset;
+  border-color: rgba(0, 0, 0, 0.3647058824);
 }
 
 .fondo {
@@ -495,14 +468,14 @@ form ul li input, form ul li textarea {
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  background-image: linear-gradient(270deg, rgb(215, 199, 230), transparent), linear-gradient(90deg, rgb(215, 199, 230), transparent), url(./../assets/sas.jpg), url(./../assets/sas2.jpg);
+  background-image: linear-gradient(270deg, #c3a6df, transparent), linear-gradient(90deg, #c3a6df, transparent), url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas.jpg), url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas2.jpg);
   background-position: 0%, 100%, right, left;
   background-size: 31%, 31%, 30%, 30%;
   overflow: hidden;
 }
 @media screen and (max-width: 720px) {
   .fondo {
-    background-image: linear-gradient(0deg, rgba(215, 199, 230, 0.102), rgba(215, 199, 230, 0.102)) url(./../assets/sas.jpg);
+    background-image: linear-gradient(0deg, rgba(214, 214, 214, 0.2039215686), rgba(214, 214, 214, 0.2039215686)) url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas.jpg);
     background-position: left;
     background-size: cover;
   }
@@ -545,6 +518,46 @@ form ul li input, form ul li textarea {
 }
 .fondo div div img {
   width: 100%;
+}
+
+.indexArticle {
+  background-color: #c3a6df;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-image: linear-gradient(270deg, rgba(214, 214, 214, 0.2039215686), rgba(0, 0, 0, 0.3647058824), rgba(214, 214, 214, 0.2039215686)), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/wel.png");
+  background-size: 100%, auto;
+}
+.indexArticle div {
+  width: 570px;
+  font-weight: bolder;
+  font-size: large;
+  text-align: center;
+  margin-top: 3%;
+}
+.indexArticle img {
+  margin-top: 20px;
+  background-image: radial-gradient(closest-side, rgba(0, 0, 0, 0.3647058824), transparent);
+  background-position: center;
+  animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@media screen and (max-width: 720px) {
+  .indexArticle div {
+    width: 300px;
+  }
+  .indexArticle img {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .indexArticle div {
+    width: 220px;
+    font-size: medium;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
