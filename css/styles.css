@@ -100,8 +100,14 @@ article {
   padding-top: 20px;
 }
 
-.contFlex {
+.genFlex, .contFlex {
   flex-wrap: wrap;
+}
+
+.contFlex {
+  background-image: linear-gradient(90deg, #30222c, transparent);
+  background-position: -10%;
+  background-size: 55%;
 }
 
 .subray {
@@ -128,7 +134,7 @@ article {
   width: 93%;
 }
 
-.spaceArrown, .contFlex {
+.spaceArrown, .genFlex, .contFlex {
   display: flex;
   justify-content: space-around;
 }
@@ -209,17 +215,22 @@ article p {
   .nosotros {
     width: 400px;
   }
-  .contFlex {
+  .genFlex, .contFlex {
     flex-flow: column;
     align-items: center;
     font-size: 76%;
+  }
+  .contFlex {
+    background-image: linear-gradient(90deg, #30222c, transparent), linear-gradient(90deg, transparent, #30222c);
+    background-position: -5%, 105%;
+    background-size: 55%, 55%;
   }
   .ayudaSpace {
     width: 95%;
   }
   .fondoAyudaCell {
     background-size: cover;
-    background-image: linear-gradient(0deg, rgba(214, 214, 214, 0.2039215686), rgba(214, 214, 214, 0.2039215686)), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/ayuda.jpg");
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.337254902), rgba(255, 255, 255, 0.337254902)), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/ayuda.jpg");
   }
 }
 @media screen and (max-width: 440px) {
@@ -330,13 +341,13 @@ footer ul a:hover {
 }
 footer h6 {
   position: relative;
-  font-size: 12px;
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.3647058824);
   margin-top: 15px;
 }
 @media screen and (max-width: 721px) {
   footer h6 {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 0px;
   }
 }
@@ -415,6 +426,7 @@ input[type=radio] {
 }
 
 form {
+  background-color: #c3a6df;
   display: flex;
   justify-content: center;
   margin-top: 3rem;
@@ -468,9 +480,9 @@ form ul li input[type=checkbox] {
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  background-image: linear-gradient(270deg, #c3a6df, transparent), linear-gradient(90deg, #c3a6df, transparent), url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas.jpg), url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas2.jpg);
+  background-image: linear-gradient(270deg, #c3a6df, #c3a6df, transparent), linear-gradient(90deg, #c3a6df, #c3a6df, transparent), url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas.jpg), url(https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/sas2.jpg);
   background-position: 0%, 100%, right, left;
-  background-size: 31%, 31%, 30%, 30%;
+  background-size: 50%, 50%, contain, contain;
   overflow: hidden;
 }
 @media screen and (max-width: 720px) {
@@ -529,7 +541,7 @@ form ul li input[type=checkbox] {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-image: linear-gradient(270deg, rgba(214, 214, 214, 0.2039215686), rgba(0, 0, 0, 0.3647058824), rgba(214, 214, 214, 0.2039215686)), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/wel.png");
+  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.337254902), rgba(255, 255, 255, 0.337254902)), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/wel.png");
   background-size: 100%, auto;
 }
 .indexArticle div {
@@ -537,7 +549,8 @@ form ul li input[type=checkbox] {
   font-weight: bolder;
   font-size: large;
   text-align: center;
-  margin-top: 3%;
+  padding-bottom: 3%;
+  padding-top: 3%;
 }
 .indexArticle img {
   margin-top: 20px;

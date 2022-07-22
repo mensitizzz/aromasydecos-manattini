@@ -13,7 +13,7 @@ footer{
             left: 0;   
         }
         a{
-            @media screen and (min-width: $high+1){
+            @media screen and (min-width: 721px){
             height: 0px;
             position: relative;
             bottom: 53px;
@@ -32,11 +32,11 @@ footer{
     }
     h6{
         position: relative;
-        font-size: 12px;
+        font-size: 14px;
         color: $semiNegro;
         margin-top: 15px;
-        @media screen and (max-width: $high+1){
-            font-size: 8px;
+        @media screen and (max-width: 721px){
+            font-size: 12px;
             margin-top: 0px;
         }
     } 

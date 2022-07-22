@@ -35,9 +35,15 @@ article{
     background-size: 50%,50%;
     padding-top: 20px;
 }
-.contFlex{
+.genFlex{
     @extend .spaceArrown;
     flex-wrap: wrap;
+}
+.contFlex{
+    @extend .genFlex;
+    background-image: linear-gradient(90deg, $moradoOscuro, transparent);
+    background-position: -10%;
+    background-size: 55%;
 }
 .subray{
     border: 0;
@@ -127,17 +133,23 @@ article p{
     .nosotros{
         width: 400px;
     }
-    .contFlex{
+    .genFlex{
         flex-flow: column;
         align-items: center;
         font-size: 76%;
+    }
+    .contFlex{
+        @extend .genFlex;
+        background-image: linear-gradient(90deg, $moradoOscuro, transparent),linear-gradient(90deg, transparent, $moradoOscuro);
+        background-position: -5%,105%;
+        background-size: 55%,55%;
     }
     .ayudaSpace{
         width: 95%;
     }
     .fondoAyudaCell{
         background-size: cover;
-        background-image: linear-gradient(0deg, $semiGris, $semiGris), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/ayuda.jpg");
+        background-image: linear-gradient(0deg, $semiBlanco, $semiBlanco), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/ayuda.jpg");
     }
 }
 @media screen and (max-width: $mid){

@@ -1,12 +1,14 @@
 .indexArticle{
     @include article();
     @include flexColCenter();
-    background-image: linear-gradient(270deg, $semiGris,$semiNegro,$semiGris), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/wel.png");
+    background-image: linear-gradient(270deg, $semiBlanco,$semiBlanco), url("https://raw.githubusercontent.com/mensitizzz/imagenesdepagina/main/assets/wel.png");
     background-size: 100%, auto;
     div{
         width: 570px;
         @include largeFont();
-        margin-top: 3%;
+        padding-bottom: 3%;
+        padding-top: 3%;
+
     }
     img{
         margin-top: 20px;
